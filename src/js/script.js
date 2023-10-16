@@ -191,7 +191,7 @@ const checkAnswer = event => {
   currQuestionIndex += 1;
   !(currQuestionIndex == levelQuestions.length)
     ? setTimeout(() => renderQuestions(levelQuestions, currQuestionIndex), 500)
-    : gameOver();
+    : setTimeout(gameOver, 500);
   clearTimerTimeout(timerTimeout);
   clearTimerInterval(timerInterval);
 };
