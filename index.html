@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="icon" href="./src/images/logo.png">
+  </head>
+  <body>
+    <main class="container" id="home-page">
+      <section class="container__img">
+        <h1 class="container__img__title">Quiz app</h1>
+        <img
+          src="src/images/crossed-swords-png-layers-transparent-images.png"
+          alt="hero img"
+        />
+      </section>
+      <section class="container__actions">
+        <button
+          data-level="one"
+          data-levelnum="1"
+          class="choose-lvl btn btn--orange"
+        >
+          Level1
+        </button>
+        <button
+          data-level="two"
+          data-levelnum="2"
+          class="choose-lvl btn btn--transparent"
+        >
+          Level2
+        </button>
+        <button
+          data-level="three"
+          data-levelnum="3"
+          class="choose-lvl btn btn--orange"
+        >
+          Level3
+        </button>
+      </section>
+    </main>
+    <main class="app hidden">
+      <section class="app__head">
+        <div class="app__head__title">question1</div>
+        <div class="app__head__time-line">
+          <div class="timelinePercentage"></div>
+        </div>
+      </section>
+      <section class="app__question">
+        <div class="app__question__img">
+          <img src="src/images/Image.svg" alt="" class="qu-img"/>
+        </div>
+        <div class="app__question__title">what is this?</div>
+      </section>
+      <section class="app__answers">
+        <button class="btn">pencil</button>
+        <button class="btn">bench</button>
+        <button class="btn">lap top</button>
+        <button class="btn">ball</button>
+      </section>
+    </main>
+
+    <main class="gameover hidden">
+      <section class="gameover__main">
+        <h2 class="gameover__main__title">nice work</h2>
+        <div class="gameover__main__circle">
+          <span>
+            <span></span>
+          </span>
+        </div>
+        <div class="gameover__main__stars">
+          <img src="src/images/empty.svg" alt="Star" class="star" />
+          <img src="src/images/empty.svg" alt="Star" class="star" />
+          <img src="src/images/empty.svg" alt="Star" class="star" />
+        </div>
+        <h3 class="gameover__main__desc">you got 3 of 4</h3>
+      </section>
+      <section class="gameover__actions">
+        <button class="btn next-level">next level</button>
+        <button class="btn go-home">home</button>
+      </section>
+    </main>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>

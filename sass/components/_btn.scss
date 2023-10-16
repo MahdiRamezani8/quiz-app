@@ -1,0 +1,31 @@
+.btn {
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  border: 0.1rem solid $white;
+  transition: 0.3s;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: $white;
+  text-align: center;
+
+  &:nth-child(even) {
+    background-color: $transparent;
+  }
+
+  &:nth-child(odd) {
+    background-color: $orange;
+  }
+
+  &:hover {
+    transform: translateY(-0.15rem);
+  }
+
+  &--true {
+    background-color: $green !important;
+  }
+
+  &--false {
+    background-color: $red !important;
+  }
+}

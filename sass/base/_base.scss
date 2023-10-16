@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+  font-family: poppins;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+a {
+  all: unset;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+@media (max-width: 480px) {
+  body {
+    background: linear-gradient(169deg, $purple 0%, $darkPurple 96.38%);
+  }
+}

@@ -1,0 +1,96 @@
+.gameover {
+  width: 350px;
+  height: 95vh;
+  padding: 2rem 0;
+  background: linear-gradient(169deg, $purple 0%, $darkPurple 96.38%);
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem $lowOpacityBlack;
+  @include mediaQuery();
+  @include flexCol();
+  justify-content: end;
+
+  &__main {
+    @include flexCol();
+    gap: 2rem;
+    &__title {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    &__circle {
+      position: relative;
+      width: 12rem;
+      height: 12rem;
+      background-color: $orange;
+      border-radius: 50%;
+      border: 0.2rem solid $white;
+      box-shadow: 0 1rem 2rem $darkerPurple;
+
+      & span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 7.5rem;
+        height: 7.5rem;
+        background-color: $orange;
+        border-radius: 50%;
+        border: 0.2rem solid $white;
+        & span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          &::after,
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0.8rem;
+            background-color: $white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &::before {
+            height: 2rem;
+            transform: rotate(-45deg) translateX(-1.2rem) translateY(-1.1rem);
+            border-radius: 0.3rem 0.3rem 0 0;
+          }
+          &::after {
+            height: 4rem;
+            transform: rotate(45deg) translateX(-1.2rem) translateY(-1.7rem);
+            border-radius: 0.3rem 0.3rem 0 0;
+          }
+        }
+      }
+    }
+    &__stars {
+      img {
+        width: 35px;
+        transform: scale(0);
+        animation: scale 0.5s ease-in-out forwards;
+        &:nth-child(2) {
+          width: 50px;
+          animation-delay: 0.5s;
+        }
+        &:nth-child(3) {
+          animation-delay: 1s;
+        }
+      }
+    }
+    &__desc {
+      font-size: 1.6rem;
+      color: $white;
+    }
+  }
+
+  &__actions {
+    @include flexCol();
+    gap: 2rem;
+    width: 90%;
+    margin-top: 18rem;
+  }
+}

@@ -1,0 +1,73 @@
+.app {
+    width: 350px;
+    height: 95vh;
+    background: linear-gradient(169deg, $purple 0%, $darkPurple 96.38%);
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 2rem $lowOpacityBlack;
+    @include flexCol();
+    @include mediaQuery();
+    justify-content: space-between;
+    padding: 2rem 0;
+  
+    &__head {
+      @include flexCol();
+      width: 90%;
+      gap: 1.5rem;
+      &__title {
+        width: 100%;
+        font-size: 2rem;
+        color: $white;
+      }
+  
+      &__time-line {
+        width: 100%;
+        height: 1rem;
+        background-color: $darkPurple;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem $lowOpacityBlack;
+        & .timelinePercentage {
+          width: 2rem;
+          height: 1rem;
+          background-color: #ff9051;
+        }
+      }
+    }
+  
+    &__question {
+      @include flexCol();
+      width: 90%;
+      background-color: $white;
+      border-radius: 4rem;
+      padding: 0 1rem 3rem;
+      &__img {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        img {
+          background-color: $white;
+          border: .2rem solid $darkerPurple;
+          border-radius: .5rem;
+          position: absolute;
+          width: 120px;
+          height: 120px;
+          top: -2rem;
+        }
+      }
+      &__title {
+        font-size: 2rem;
+        text-align: center;
+        color: $darkerPurple;
+      }
+    }
+  
+    &__answers {
+      @include flexCol();
+      width: 90%;
+      gap: 1rem;
+  
+      .btn {
+        padding: 1.5rem 0;
+      }
+    }
+  }

@@ -1,0 +1,31 @@
+.container {
+  width: 350px;
+  height: 95vh;
+  background: linear-gradient(169deg, $purple 0%, $darkPurple 96.38%);
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem $lowOpacityBlack;
+  @include flexCol();
+  @include mediaQuery();
+  justify-content: space-between;
+  padding: 2rem 0;
+
+  &__img {
+    @include flexCol();
+    gap: 2rem;
+    margin-top: 6rem;
+    &__title {
+      color: white;
+      font-size: 4rem;
+    }
+    img {
+      width: 60%;
+    }
+  }
+  &__actions {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
